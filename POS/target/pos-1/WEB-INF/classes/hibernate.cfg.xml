@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.jboss.org/dtd/hibernate/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pos</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.username">jatin</property>
+		<property name="hibernate.connection.password">6432</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">create-drop</property> 
+		<mapping class="com.jeet.api.Item" />
+		<mapping class="com.jeet.api.Unit" />
+		<mapping class="com.jeet.api.Type" />
+		<mapping class="com.jeet.api.Offer" />
+		
+		<mapping class="com.jeet.api.Supplier" />
+		<mapping class="com.jeet.api.ItemSupplier" />
+		<mapping class="com.jeet.api.ItemOffer" />
+		<mapping class="com.jeet.api.Stock" />
+		
+		<mapping class="com.jeet.api.Bill" />
+		<mapping class="com.jeet.api.ItemBill" />
+		
+	</session-factory>
+</hibernate-configuration>
